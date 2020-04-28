@@ -32,12 +32,12 @@ t=0
 def DFS_func_type1(x,Adj): 
    global t
    visit_point.append(x)
-   t+=1;visit_time[x]=t
-   for y in Adj[x]:
+   t+=1;visit_time[x]=t #為x
+   for y in Adj[x]: #這個for以下是為y設計
        if visit_time[y]==0:
            DFS_func_type1(y,Adj)
            parent[y] = x
-   t+=1;visit_out[x]=t   
+   t+=1;visit_out[x]=t #為x
    return
 
 DFS_func_type1(7,Adj_DList)

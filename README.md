@@ -6,5 +6,5 @@ Hi there!I wrote two types of recrusion which apply depth first search by Python
 
 * **Code：**[DFS_Python Code](https://github.com/CubatLin/Easy-way-to-demonstrate-Depth-Frist-Search-in-10-lines-by-using-Python/blob/master/DFSdemo.py)
 
-Key words：Depth-First Search, Recursion, Graph Theory
+**Key words：Depth-First Search, Recursion, Graph Theory**
 

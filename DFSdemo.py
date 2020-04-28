@@ -35,7 +35,7 @@ def DFS_func_type1(x,Adj):
    t+=1;visit_time[x]=t
    for y in Adj[x]:
        if visit_time[y]==0:
-           DFS_func(y,Adj)
+           DFS_func_type1(y,Adj)
            parent[y] = x
    t+=1;visit_out[x]=t   
    return
@@ -62,7 +62,7 @@ def DFS_func_type2(x,Adj):
     t+=1;visit_time[x]=t;print(t,x)
     for y in Adj[x]:
         if visit_time[y]==0:
-            DFS_func(y,Adj)
+            DFS_func_type2(y,Adj)
             parent[y]=x
     t+=1;visit_out[x]=t;print(t,x)
         
@@ -73,16 +73,42 @@ def DFS_func_Additional(x,Adj):
     global t
     if Adj[x]==[]:
         visit_point.append(x)
-        t+=1;visit_time[x]=t;print(t,x)
-        t+=1;visit_out[x]=t;print(t,x)
+        t+=1;visit_time[x]=t;print('Time:',t,'Point:',x)
+        t+=1;visit_out[x]=t;print('Time:',t,'Point:',x)
         return 
     visit_point.append(x)
-    t+=1;visit_time[x]=t;print(t,x)
+    t+=1;visit_time[x]=t;print('Time:',t,'Point:',x)
     for y in Adj[x]:
         if visit_time[y]==0:
-            DFS_func(y,Adj)
+            DFS_func_Additional(y,Adj)
             parent[y]=x
-        t+=1;visit_out[x]=t;print(t,x) #What happened if I change this line?
+        t+=1;visit_out[x]=t;print('Time:',t,'Point:',x) #What happened if I change this line?
         
 DFS_func_Additional(7,Adj_DList)
-
+# =============================================================================
+# DFS_func_Additional's process
+# Time: 1 Point: 7
+# Time: 2 Point: 3
+# Time: 3 Point: 8
+# Time: 4 Point: 0
+# Time: 5 Point: 0
+# Time: 6 Point: 8
+# Time: 7 Point: 3
+# Time: 8 Point: 2
+# Time: 9 Point: 2
+# Time: 10 Point: 3
+# Time: 11 Point: 7
+# Time: 12 Point: 6
+# Time: 13 Point: 4
+# Time: 14 Point: 1
+# Time: 15 Point: 5
+# Time: 16 Point: 5
+# Time: 17 Point: 1
+# Time: 18 Point: 1
+# Time: 19 Point: 4
+# Time: 20 Point: 4
+# Time: 21 Point: 6
+# Time: 22 Point: 6
+# Time: 23 Point: 7
+# Time: 24 Point: 7
+# =============================================================================

@@ -3,8 +3,8 @@ import pandas as pd
 from collections import deque
 import numpy as np
 
-c1 = [7,7,7,3,3,8,2,6,6,4,4,1,1]
-c2 = [3,6,4,8,2,0,0,4,1,1,5,5,2]
+c1 = [7,7,3,3,8,2,6,6,4,4,1,1]
+c2 = [3,6,8,2,0,0,4,1,1,5,5,2]
  
 data_array = np.vstack((c1,c2)).T
 del c1 ,c2
@@ -50,7 +50,7 @@ visit_point = [] # 紀錄遍歷順序
 parent = np.zeros(data_array.max()+1) #父節點
 t=0
 
-#Depth-First Search Main Function 
+#Depth-First Search Main Function Type2
 def DFS_func_type2(x,Adj):
     global t
     if Adj[x]==[]:

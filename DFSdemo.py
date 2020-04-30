@@ -82,7 +82,7 @@ def DFS_func_Additional(x,Adj):
         if visit_time[y]==0:
             DFS_func_Additional(y,Adj)
             parent[y]=x
-        t+=1;visit_out[x]=t;print('Time:',t,'Point:',x) #What will happen if I change this line?
+        t+=1;visit_out[x]=t;print('Time:',t,'Point:',x) #What will happen if I change indentation of this line?
         
 DFS_func_Additional(7,Adj_DList)
 # =============================================================================
